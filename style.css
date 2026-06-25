@@ -15,22 +15,30 @@
 body {
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(circle at top, #4b3f9e 0%, #0d1024 55%, #05050c 100%);
     color: var(--text);
     display: grid;
     place-items: center;
     padding: 24px;
+    background-image:
+        linear-gradient(rgba(13, 16, 36, 0.55), rgba(5, 5, 12, 0.75)),
+        url('./assets/img/larp_1.webp'),
+        url('./assets/img/aura_img.jpeg');
+    background-size: cover, 50% auto, 50% auto;
+    background-position: center center, left center, right center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
 .conteudo_geral {
     width: min(560px, 100%);
     text-align: center;
-    background: var(--panel);
+    background-color: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 28px;
     padding: 34px 28px;
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(16px);
+    position: relative;
+    z-index: 1;
 }
 
 .conteudo_geral img {
@@ -52,6 +60,73 @@ body {
     color: rgba(238, 241, 255, 0.78);
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.container__texto {
+    margin-top: 26px;
+}
+
+.container__texto h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.container__texto p {
+    color: rgba(238, 241, 255, 0.85);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.container__input {
+    width: min(280px, 100%);
+    margin: 18px auto 14px;
+    display: block;
+    padding: 13px 16px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container__input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.15);
+}
+
+.container__botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.container__botao {
+    border: none;
+    border-radius: 16px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    box-shadow: 0 14px 30px rgba(124, 92, 255, 0.22);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.container__botao:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.container__botao:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 @media (max-width: 480px) {

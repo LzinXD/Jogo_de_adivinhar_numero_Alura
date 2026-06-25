@@ -2,7 +2,7 @@ alert("salve");
 
 let nome = window.prompt("Qual é o seu nome?");
 alert("Bem-vindo ao O JOGO, " + nome + "!");
-let numMax = 50
+let numMax = 67
 let numTentativas = 1 
 
 function pedirNumero(){
