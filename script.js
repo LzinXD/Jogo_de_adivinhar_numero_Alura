@@ -2,15 +2,16 @@ alert("salve");
 
 let nome = window.prompt("Qual é o seu nome?");
 alert("Bem-vindo ao O JOGO, " + nome + "!");
+let numMax = 50
 let numTentativas = 1 
 
 function pedirNumero(){
 
-    const numeroSecreto =  Math.floor(Math.random() * 20) + 1;// gera numeor aleatorio de 1 a 20 */
+    const numeroSecreto =  Math.floor(Math.random() * numMax) + 1;// gera numero aleatorio de 1 a 20 */
     let resposta;
 
     while(resposta != numeroSecreto) {
-       resposta = Number(window.prompt("Diga um numero de 1 a 20: "));
+       resposta = Number(window.prompt(`Diga um numero de 1 a ${numMax}: `));
         if (resposta < numeroSecreto){
             alert("O numero secreto é maior que " + resposta);
             numTentativas++;
@@ -29,5 +30,4 @@ function pedirNumero(){
         alert("Boa, " + nome + "! Você venceu O JOGO! Você precisou de " + numTentativas + " tentativas.");
     } */
 }
-pedirNumero(); 
-
+pedirNumero();  
