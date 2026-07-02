@@ -10,15 +10,15 @@
     <section class="conteudo_geral">
         <img src="./assets/img/3T.png" alt="3t">
         <div>
-            <h1>Bem-vindo ao O JOGO</h1>
+            <h1 id="titulo"></h1>
         </div>
         <div class="container__texto">
-            <h1>Descubra o número secreto e ganhe AURA</h1>
-            <p class="texto__paragrafo">Digite um número entre 1 e 67 e clique em Chutar.</p>
+            <h1 id="titulo2"></h1>
+            <p id="paragrafo" class="texto__paragrafo"></p>
         </div>
-        <input type="number" min="1" max="50" placeholder="Digite um número" class="container__input">
+        <input min="1" max="67" placeholder="Digite um número" class="container__input">
         <div class="chute container__botoes">
-            <button onclick="verificarChute()" class="container__botao">Chutar</button>
+            <button onclick="verificarChute()" class="container__botao">Ganhar</button>
             <button onclick="" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
         </div>
     </section>
